@@ -10,7 +10,7 @@ protected:
 public:
     Figure(string n) : name(n) {}
     virtual void print_info() {
-        cout << "Фигура: " << name << endl;
+        cout << name << endl;
     }
     virtual ~Figure() = default;
 };
@@ -33,22 +33,22 @@ public:
 
 class Right_angled_triangle : public Triangle {
 public:
-    Right_angled_triangle(string n, int a, int b, int c, int A, int B, int C)
-        : Triangle(n, a, b, c, A, B, C) {
+    Right_angled_triangle( int a, int b, int c, int A, int B)
+        : Triangle("Прямоугольный треугольник", a, b, c, A, B, 90) {
     }
 };
 
 class Isosceles_triangle : public Triangle {
 public:
-    Isosceles_triangle(string n, int a, int b, int c, int A, int B, int C)
-        : Triangle(n, a, b, c, A, B, C) {
+    Isosceles_triangle(int a, int b, int c, int A, int B, int C)
+        : Triangle("Равнобедренный треугольник", a, b, c, A, B, C) {
     }
 };
 
 class Equilateral_triangle : public Triangle {
 public:
-    Equilateral_triangle(string n, int a, int b, int c, int A, int B, int C)
-        : Triangle(n, a, b, c, A, B, C) {
+    Equilateral_triangle(int a)
+        : Triangle("Равнностороний треугольник", a, a, a, 60, 60, 60) {
     }
 };
 
@@ -70,29 +70,29 @@ public:
 
 class Rectangles : public Quadrilateral {
 public:
-    Rectangles(string n, int a, int b, int c, int d, int A, int B, int C, int D)
-        : Quadrilateral(n, a, b, c, d, A, B, C, D) {
+    Rectangles(int a, int b)
+        : Quadrilateral("Прямоугольник", a, b, a, b, 90,90,90,90) {
     }
 };
 
 class Square : public Quadrilateral {
 public:
-    Square(string n, int a, int b, int c, int d, int A, int B, int C, int D)
-        : Quadrilateral(n, a, b, c, d, A, B, C, D) {
+    Square(int a)
+        : Quadrilateral("Квадрат", a,a,a,a, 90,90,90,90) {
     }
 };
 
 class Parallelogram : public Quadrilateral {
 public:
-    Parallelogram(string n, int a, int b, int c, int d, int A, int B, int C, int D)
-        : Quadrilateral(n, a, b, c, d, A, B, C, D) {
+    Parallelogram(int a, int b, int A, int B)
+        : Quadrilateral("Паралелограмм", a, b, a, b, A, B, A, B) {
     }
 };
 
 class Rhombus : public Quadrilateral {
 public:
-    Rhombus(string n, int a, int b, int c, int d, int A, int B, int C, int D)
-        : Quadrilateral(n, a, b, c, d, A, B, C, D) {
+    Rhombus(int a,  int A, int B)
+        : Quadrilateral("Ромб", a, a, a, a, A, B, A, B) {
     }
 };
 
@@ -105,16 +105,16 @@ int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    Triangle triangle("Треугольник", 10, 20, 30, 50, 60, 70);
-    Right_angled_triangle right_triangle("Прямоугольный треугольник", 10, 20, 30, 50, 60, 90);
-    Isosceles_triangle isosceles_triangle("Равнобедренный треугольник", 10, 20, 10, 50, 60, 50);
-    Equilateral_triangle equilateral_triangle("Равносторонний треугольник", 30, 30, 30, 60, 60, 60);
+    Triangle triangle("Треугольник",10, 20, 30, 50, 60, 70);
+    Right_angled_triangle right_triangle(10, 20, 30, 50, 60);
+    Isosceles_triangle isosceles_triangle(10, 20, 10, 50, 60, 50);
+    Equilateral_triangle equilateral_triangle(30);
 
-    Quadrilateral quadrilateral("Четырёхугольник", 10, 20, 30, 40, 50, 60, 70, 80);
-    Rectangles rectangles("Прямоугольник", 10, 20, 10, 20, 90, 90, 90, 90);
-    Square square("Квадрат", 20, 20, 20, 20, 90, 90, 90, 90);
-    Parallelogram parallelogram("Параллелограмм", 20, 30, 20, 30, 30, 40, 30, 40);
-    Rhombus rhombus("Ромб", 30, 30, 30, 30, 30, 40, 30, 40);
+    Quadrilateral quadrilateral("Четырехугольник" ,10, 20, 30, 40, 50, 60, 70, 80);
+    Rectangles rectangles(10, 20);
+    Square square( 20);
+    Parallelogram parallelogram(20, 30, 30, 40);
+    Rhombus rhombus(30, 30, 40);
 
     Figure* figures[] = {
         &triangle,
