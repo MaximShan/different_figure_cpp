@@ -16,7 +16,7 @@
     }
 
     void Triangle::print_info(){
-        cout << name << " (" << endl;
-        cout << "Стороны: a=" << _a << " b=" << _b << " c=" << _c << endl;
+        cout << name << " (";
+        cout << "Стороны: a=" << _a << " b=" << _b << " c=" << _c;
         cout << "Углы: A=" << _A << " B=" << _B << " C=" << _C << ") создан" << endl << endl;
     }
