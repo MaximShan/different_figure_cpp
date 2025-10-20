@@ -5,16 +5,13 @@
 
 Quadrilateral::Quadrilateral(string n, int a, int b, int c, int d,
     int A, int B, int C, int D)
-    try : Figure(n), _a(a), _b(b), _c(c), _d(d),
+    : Figure(n), _a(a), _b(b), _c(c), _d(d),
     _A(A), _B(B), _C(C), _D(D) {
     if (_A + _B + _C + _D != 360) {
         throw BadFigure("Сумма углов четырёхугольника должна быть равна 360");
     }
 }
-catch (const BadFigure& e) {
-    std::cerr << "Ошибка создания фигуры. Причина: " << e.what() << std::endl;
-    throw;
-}
+
 
 void Quadrilateral::print_info(){
         cout << name << " (";

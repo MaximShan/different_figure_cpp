@@ -28,6 +28,7 @@ int main() {
         triangle.print_info();
     }
     catch (const BadFigure& e) {
+        cerr << "Ошибка создания фигуры. Причина: " << e.what() << endl;
     }
 
     try {
@@ -35,6 +36,7 @@ int main() {
         right_triangle.print_info();
     }
     catch (const BadFigure& e) {
+        cerr << "Ошибка создания фигуры. Причина: " << e.what() << endl;
     }
 
     try {
@@ -42,6 +44,7 @@ int main() {
         isosceles_triangle.print_info();
     }
     catch (const BadFigure& e) {
+        cerr << "Ошибка создания фигуры. Причина: " << e.what() << endl;
     }
 
     try {
@@ -49,6 +52,7 @@ int main() {
         equilateral_triangle.print_info();
     }
     catch (const BadFigure& e) {
+        std::cerr << "Ошибка создания фигуры. Причина: " << e.what() << std::endl;
     }
 
     try {
@@ -56,6 +60,7 @@ int main() {
         quadrilateral.print_info();
     }
     catch (const BadFigure& e) {
+        cerr << "Ошибка создания фигуры. Причина: " << e.what() << endl;
     }
 
     try {
@@ -63,6 +68,7 @@ int main() {
         rectangles.print_info();
     }
     catch (const BadFigure& e) {
+        cerr << "Ошибка создания фигуры. Причина: " << e.what() << endl;
     }
 
     try {
@@ -70,6 +76,7 @@ int main() {
         square.print_info();
     }
     catch (const BadFigure& e) {
+        cerr << "Ошибка создания фигуры. Причина: " << e.what() << endl;
     }
 
     try {
@@ -77,6 +84,7 @@ int main() {
         parallelogram.print_info();
     }
     catch (const BadFigure& e) {
+        cerr << "Ошибка создания фигуры. Причина: " << e.what() << endl;
     }
 
     try {
@@ -84,6 +92,7 @@ int main() {
         rhombus.print_info();
     }
     catch (const BadFigure& e) {
+        cerr << "Ошибка создания фигуры. Причина: " << e.what() << endl;
     }
 
     
