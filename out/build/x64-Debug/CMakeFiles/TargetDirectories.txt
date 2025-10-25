@@ -1,0 +1,3 @@
+D:/програмирование курсы/CPP/Diferent_figures/out/build/x64-Debug/CMakeFiles/Diferent_figures.dir
+D:/програмирование курсы/CPP/Diferent_figures/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+D:/програмирование курсы/CPP/Diferent_figures/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
