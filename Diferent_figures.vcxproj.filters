@@ -80,8 +80,5 @@
     <ClInclude Include="Rhombus.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="BadFigure.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

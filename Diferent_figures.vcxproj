@@ -140,7 +140,6 @@
     <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BadFigure.h" />
     <ClInclude Include="Equilateral_triangle.h" />
     <ClInclude Include="Figure.h" />
     <ClInclude Include="Isosceles_triangle.h" />
